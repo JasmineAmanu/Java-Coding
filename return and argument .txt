@@ -1,0 +1,472 @@
+return and argument :
+----------------------------------------------
+1)
+Main class :
+add method:a+b 
+sub method:a-b 
+multi method:a*b 
+div method:a/b 
+mod method:a%b 
+
+user input
+
+import java.util.*;
+
+
+public class Main
+{
+  int add(int a,int b) {
+      int c=a+b;
+      System.out.println("Sum : "+c);
+      return c;
+  } 
+  int sub(int a,int b) {
+       int c=a-b;
+      System.out.println("Sub : "+c);
+      return c;
+  } 
+   int mul(int a,int b) {
+      int c=a*b;
+      System.out.println("Mul : "+c);
+      return c;
+  }  
+   int div(int a,int b) {
+       int c=a/b;
+      System.out.println("Div : "+c);
+      return c;
+  } 
+  int mod(int a,int b) {
+      int c=a%b;
+      System.out.println("Mod : "+c);
+      return c;
+  } 
+    
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Main j=new Main();
+		System.out.println("Enter value of a and b to add?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();
+		j.add(a,b);
+		System.out.println("Enter value of a and b to sub?");
+		int c =sc.nextInt();
+		int d=sc.nextInt();
+		j.sub(c,d);
+		System.out.println("Enter value of a and b to mul?");
+		int e=sc.nextInt();
+		int f=sc.nextInt();
+		j.mul(e,f);
+		System.out.println("Enter value of a and b to div?");
+		int g =sc.nextInt();
+		int h=sc.nextInt();
+		j.div(g,h);
+		System.out.println("Enter value of a and b to modular?");
+		int i =sc.nextInt();
+		int k=sc.nextInt();
+		j.mod(i,k);
+		
+	}
+
+} 
+--------------------------------------------------
+2)
+A class :
+add method:a+b 
+
+B class 
+mod method:a%b 
+
+C class 
+div method:a/b 
+
+
+D class 
+multi method:a*b 
+
+E class
+sub method:a-b 
+
+Main class :access 
+
+user input  
+
+import java.util.*;
+
+class A{
+    int add(int a,int b) {
+      int c=a+b;
+      System.out.println("Sum : "+c);
+      return c;
+  } 
+}
+class B{
+   int sub(int a,int b) {
+       int c=a-b;
+      System.out.println("Sub : "+c);
+      return c;
+  }  
+}
+class C{
+     int mul(int a,int b) {
+      int c=a*b;
+      System.out.println("Mul : "+c);
+      return c;
+  } 
+}
+class D{
+     int div(int a,int b) {
+       int c=a/b;
+      System.out.println("Div : "+c);
+      return c;
+  } 
+    
+}
+class E{
+    int mod(int a,int b) {
+      int c=a%b;
+      System.out.println("Mod : "+c);
+      return c;
+  } 
+}
+
+public class Main
+{
+  public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		A j=new A();
+		System.out.println("Enter value of a and b to add?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();
+		j.add(a,b);
+			B z=new B();
+		System.out.println("Enter value of a and b to sub?");
+		int c =sc.nextInt();
+		int d=sc.nextInt();
+		z.sub(c,d);
+			C y=new C();
+		System.out.println("Enter value of a and b to mul?");
+		int e=sc.nextInt();
+		int f=sc.nextInt();
+		y.mul(e,f);
+			D x=new D();
+		System.out.println("Enter value of a and b to div?");
+		int g =sc.nextInt();
+		int h=sc.nextInt();
+		x.div(g,h);
+			E u=new E();
+		System.out.println("Enter value of a and b to modular?");
+		int i =sc.nextInt();
+		int k=sc.nextInt();
+		u.mod(i,k);
+		
+	}
+
+}
+----------------------------------------------------
+3)
+Main class 
+method :factorial 
+method :armstrong
+method :pallindrome
+method :neon
+method :perfect
+method :voterid
+method :gender
+main method :
+access 
+
+import java.util.*;
+public class Main
+{
+   int factorial(int num){
+       int fact=1;
+        for(int i=1;i<=num;i++){
+            fact=fact*i;
+        }
+        System.out.println("Factorial no: "+fact);
+        return fact;
+    }
+     int armstrong(int num1) {
+        int sum=0;
+        int rem;
+        int temp=num1;
+        while(num1>0){
+            rem=num1%10;
+            sum=sum+rem*rem*rem;
+            num1=num1/10;
+        }
+        if(temp==sum){
+            System.out.println("Armstrong noo  ");
+        }
+        else{
+            System.out.println("Not Armstrong noo  ");
+        }
+        return temp;
+}
+ int palindrome(int num2) {
+       
+      
+        int sum=0;
+        int rem;
+        int temp=num2;
+        while(num2>0){
+            rem=num2%10;
+            sum=sum*10+rem;
+            num2=num2/10;
+        }
+        if(temp==sum){
+            System.out.println("Palindrome noo  ");
+        }
+        else{
+            System.out.println("Not Palindrome noo  ");
+        }
+        return temp;
+    }
+    int neon(int num4) {
+      int sqr=num4*num4;
+        int sum=0;
+        int rem;
+        int temp=sqr;
+        while(temp>0){
+            rem=temp%10;
+            sum=sum+rem;
+            temp=temp/10;
+        }
+        if(num4==sum){
+            System.out.println("Neon noo  ");
+        }
+        else{
+            System.out.println("Not Neon no  ");
+        }
+        return sum;
+}
+int gender(int a){
+  
+        if(a=='m'|| a=='M'){
+            System.out.println("Male");
+        }
+        else if(a=='f' || a=='F'){
+            System.out.println("Female");
+        }
+        else{
+            System.out.println("Not valid input"); 
+        }
+        return a;
+}
+int vote(int num3){
+    if(num3>=18){
+        System.out.println("Eligible to vote");
+    }
+    else{
+        System.out.println("Not Eligible to vote");
+    }
+    return num3;
+}
+
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Main j=new Main();
+		System.out.println("Enter value factorial? ");
+		int num =sc.nextInt();
+		j.factorial(num);
+		 System.out.println("enter the value of armstrong num  ");
+        int num1= sc.nextInt();
+        	j.armstrong(num1);
+	  System.out.println("enter the value of palindrome no  ");
+        int num2= sc.nextInt();
+        	j.palindrome(num2);
+        	System.out.println("enter the value of neon no ");
+        int num4 = sc.nextInt();
+        	j.neon(num4);
+        System.out.println("enter the value of f or m ");
+        char a = sc.next().charAt(0);
+        	j.gender(a);
+        	System.out.println("enter the year  ");
+        int num3= sc.nextInt();
+        	j.vote(num3);
+        
+		
+	}
+
+} 
+
+------------------------------------------------------
+4)
+Main class :
+add method:a+b :no return and no argument 
+sub method:a-b  :no return and  argument 
+multi method:a*b  : return and no argument 
+div method:a/b  : return and  argument 
+mod method:a%b : return and no argument 
+
+user input 
+
+import java.util.*;
+
+
+public class Main
+{
+  void add() {
+      	Scanner sc=new Scanner(System.in);
+      System.out.println("Enter value of a and b to add?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();
+      int c=a+b;
+      System.out.println("Sum : "+c);
+      
+  } 
+  void sub(int a,int b) {
+       int c=a-b;
+      System.out.println("Sub : "+c);
+  } 
+   int mul() {
+       	Scanner sc=new Scanner(System.in);
+       System.out.println("Enter value of a and b to add?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();
+      int c=a*b;
+      System.out.println("Mul : "+c);
+      return c;
+  }  
+   int div(int a,int b) {
+       int c=a/b;
+      System.out.println("Div : "+c);
+      return c;
+  } 
+  int mod() {
+      	Scanner sc=new Scanner(System.in);
+      System.out.println("Enter value of a and b to add?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();
+      int c=a%b;
+      System.out.println("Mod : "+c);
+      return c;
+  } 
+    
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Main j=new Main();
+		j.add();
+		System.out.println("Enter value of a and b to sub?");
+		int c =sc.nextInt();
+		int d=sc.nextInt();
+		j.sub(c,d);
+		j.mul();
+		System.out.println("Enter value of a and b to div?");
+		int g =sc.nextInt();
+		int h=sc.nextInt();
+		j.div(g,h);
+		j.mod();
+		
+	}
+
+} 
+
+
+-----------------------------------------------
+5)
+class A 
+constructor :default :this is a constructor
+add method:a+b :no return and no argument 
+sub method:a-b  :no return and  argument 
+
+class B 
+constructor :parameter :a*b 
+mod method:a%b : return and no argument 
+multi method:a*b  : return and argument 
+
+
+Main class 
+Main constructor :parameter type 
+sub method:a-b  :no return and  argument 
+
+
+main method :
+A 
+B 
+Main class 
+
+
+import java.util.*;
+class A{
+    A(){
+        System.out.println("Hello JAsmine!");
+    }
+    void add(){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter value of a and b to add?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();
+		int c=a+b;
+		System.out.println("Sum : "+c);
+    }
+    void sub(int a, int b){
+		int c=a-b;
+		System.out.println("Sub : "+c);
+    }
+}
+class B{
+ B(int a, int b){
+     int c=a*b;
+        System.out.println("The value of a and b is : "+c);
+    }
+    int mod(){
+       Scanner sc=new Scanner(System.in); 
+        System.out.println("Enter value of a and b to add?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();	
+		  int c=a%b;
+        System.out.println("The value of a and b is : "+c);
+		return c;
+    }
+    int mul(int a, int b){
+        int c=a*b;
+        System.out.println("The value of a and b is : "+c);
+		return c;
+    }
+    
+}
+public class Main
+{
+    Main(int a){
+        System.out.println("the value of a: "+a);
+    }
+    void sub(int a,int b){
+         int c=a-b;
+        System.out.println("The value of a and b is : "+c);
+    }
+  
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		 A j=new A();
+	   j.add();
+        System.out.println("Enter value of a and b to sub?");
+		int a =sc.nextInt();
+		int b=sc.nextInt();	
+		j.sub(a,b);
+		System.out.println("Enter value of a and b ");
+		int c =sc.nextInt();
+		int d=sc.nextInt();	
+		B k=new B(c,d);
+k.mod();
+		
+		System.out.println("Enter value of a and b ");
+		int e =sc.nextInt();
+		int f=sc.nextInt();	
+		k.mul(e,f);
+		System.out.println("Enter value of a  ");
+		int g =sc.nextInt();
+		Main o=new Main(a);
+		System.out.println("Enter value of a and b ");
+		int h =sc.nextInt();
+		int i=sc.nextInt();	
+		o.sub(h,i);
+		
+	}
+
+} 
+
